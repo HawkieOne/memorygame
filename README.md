@@ -15,7 +15,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
- <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com)  -->
+<div align="center">
+  <a href="https://hawkie.me"><img alt="Screenshot of app" src="memorygameImage.png" /></a>
+</div>
+
 
 A simple memory game. Match the same cards in as few turns as possible. My record is 8.
 
