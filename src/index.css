@@ -6,6 +6,17 @@ body {
   font-family: Raleway, sans-serif;
   font-size: 1.5em;
   text-align: center;
-  background: #101111;
   color: #fff;
+  position: relative;
+}
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
 }
