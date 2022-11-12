@@ -9,14 +9,9 @@ body {
   color: #fff;
   position: relative;
 }
-html {
+
+html, body, #root {
   margin: 0px;
   height: 100%;
-  width: 100%;
-}
-
-body {
-  margin: 0px;
-  min-height: 100%;
   width: 100%;
 }

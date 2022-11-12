@@ -3,12 +3,12 @@ import "./App.css";
 import SingleCard from "./components/SingleCard";
 
 const cardImages = [
-  { src: "/img/fish.png", matched: false },
-  { src: "/img/kobold.png", matched: false },
-  { src: "/img/monster.png", matched: false },
-  { src: "/img/skeleton.png", matched: false },
-  { src: "/img/werewolf.png", matched: false },
-  { src: "/img/yeti.png", matched: false },
+  { src: "/img/fish.avif", matched: false },
+  { src: "/img/kobold.avif", matched: false },
+  { src: "/img/monster.avif", matched: false },
+  { src: "/img/skeleton.avif", matched: false },
+  { src: "/img/werewolf.avif", matched: false },
+  { src: "/img/yeti.avif", matched: false },
 ];
 
 function App() {
@@ -73,22 +73,27 @@ function App() {
       <div className="header">
         <h1 className="text-title">Magic Match</h1>
       </div>
-      <button onClick={shuffleCards}>New game</button>
-
-      <div className="card-grid">
-        {cards.map((card) => (
-          <SingleCard
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-            flipped={card === choiceOne || card == choiceTwo || card.matched}
-            disabled={disabled}
-          />
-        ))}
+      <div class="game-area">
+        <div className="card-grid">
+          {cards.map((card) => (
+            <SingleCard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card == choiceTwo || card.matched}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+        <div className="stats-area">
+          <p className="text-turns">
+            Turns: <span className="text-turns-number">{turns}</span>
+          </p>
+          <button onClick={shuffleCards} className="newGameButton">
+            New game
+          </button>
+        </div>
       </div>
-      <p className="text-turns">
-        Turns: <span className="text-turns-number">{turns}</span>
-      </p>
     </div>
   );
 }
